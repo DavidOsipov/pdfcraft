@@ -19,7 +19,11 @@ Read each selected `SKILL.md` and the references it calls for. The linked name i
 
 This README is a navigation reference. Codex's documented discovery starts with skill names/descriptions and paths; the full skill loads when selected. A neighboring README is not a documented automatic instruction entrypoint. Use explicit skill invocation when selection must be precise; implicit selection matches descriptions. See [official skill documentation](https://learn.chatgpt.com/docs/build-skills).
 
-For an agent to consult this guide reliably, reference `.agents/skills/QA/README.md` in the task or applicable repository instructions. This package adds no repository-wide routing rule. Keep the guide synchronized with skill metadata; the linked skill remains authoritative for its scope and procedure.
+README: navigation. Repository routing: [AGENTS.md §5.1](../../../AGENTS.md#51-repository-skills-and-verification); consult guide when choosing QA workflow. Sync guide with skill metadata; linked skill governs scope/procedure under repository rules.
+
+## Maintaining the portable package
+
+Each skill carries references/notices. Update all same-named reference copies together; keep portable notices identical. After edits run `cargo xtask skills`; Linux CI and `cargo xtask ci` run same package check. Checks: supported plain scalar metadata, skill names, local Markdown links, guide coverage, duplicate references/notices. Unsupported metadata/link formats require explicit validator update. Structural pass proves neither automatic skill selection nor workflow behavior.
 
 ## Choose and coordinate work
 

@@ -28,7 +28,7 @@ Encryption: wrong/missing/user/owner authentication, allowed/denied operations, 
 
 ## Save boundaries and independent consumers
 
-Engine `check_save` reparses prepared bytes/checks renderable page count before publication; useful guard, not independent preservation oracle. Automation may apply `FlattenFillSign` before serialization: snapshot post-edit state for later errors. Native staging/publication differ from `mark_saved` acknowledgment. Replacement success then refresh failure leaves new disk bytes. Browser Blob/anchor/postMessage success proves dispatch, not durable storage. Inspect actual phase.
+Editable documents: engine `check_save` reparses prepared bytes/checks renderable page count before publication; useful guard, no independent preservation oracle. Invalid-bytes rejection needs editable fixture. No editor: checks skipped; `save_bytes` returns original bytes. Assess separately. Automation may apply `FlattenFillSign` before serialization: snapshot post-edit state for later errors. Native staging/publication differ from `mark_saved` acknowledgment. Replacement succeeds, refresh fails: new disk bytes remain. Browser Blob/anchor/postMessage success: dispatch only, no durable storage proof. Inspect phase.
 
 Use existing `pdfcraft-oracle` probes/required-oracle policy. Any `PDFCRAFT_ORACLES_REQUIRED` presence, including `0`, makes absence fail. qpdf syntax/warnings cannot prove preservation. External Poppler pixels/text may disagree with target/spec; never decide by majority. Deliberately wrong semantic control must fail even if every parser accepts.
 
